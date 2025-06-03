@@ -39,6 +39,9 @@ then
 	grep '"Success":true' /tmp/MAM.output > /dev/null 2>/dev/null
   	if [ $? -ne 0 ]
   	then
+		echo "---BEGIN /tmp/MAM.output---"
+        cat /tmp/MAM.output 
+        echo "---END /tmp/MAM.output---"
 		echo mam_id passed on command line is invalid
 		exit 1
 	else
