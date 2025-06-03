@@ -44,7 +44,7 @@ jobs:
           push: true
           tags: |
             ${{ github.event.inputs.image_name }}:${{ github.event.inputs.image_tag }}
-            ${{ github.event.inputs.image_name }}:${{ github.sha }} # Also tag with the Git SHA for specific versioning
+            ${{ github.event.inputs.image_name }}:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
           cache-to: type=gha,mode=max
